@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>%24/Richman4L/Richman4L/ExternalLibrary/FIGlet.Net/FIGlet.Net</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>https://wenceywang.visualstudio.com</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>WenceyWang.FIGlet</RootNamespace>
+    <AssemblyName>WenceyWang.FIGlet</AssemblyName>
+    <Authors>Wencey Wang</Authors>
+    <Company>Dream Recorder</Company>
+    <Description>Library write in C# for generating Ascii-Art text.</Description>
+    <Copyright>© Wencey Wang 2017</Copyright>
+    <Version>1.1.1</Version>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/agpl.html</PackageLicenseUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Product>FIGlet.Net</Product>
+    <PackageProjectUrl>https://github.com/WenceyWang/FIGlet.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/WenceyWang/FIGlet.Net.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageId>FIGlet.Net</PackageId>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="FIGlet.Net.csproj.vspscc" />
+    <None Remove="FIGlet.Net.nuget.targets" />
+    <None Remove="Fonts\standard.flf" />
+    <None Remove="project.lock.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\standard.flf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="11.0.0" />
+  </ItemGroup>
+
+
+</Project>

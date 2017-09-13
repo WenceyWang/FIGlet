@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <RootNamespace>WenceyWang.FIGlet.UnitTest</RootNamespace>
+
+    <AssemblyName>WenceyWang.FIGlet.UnitTest</AssemblyName>
+
+    <PackageId>FIGlet.Net.UnitTest</PackageId>
+
+    <Authors>Wencey Wang</Authors>
+
+    <Company>Dream Recorder</Company>
+
+    <Product>FIGlet.Net</Product>
+
+    <Description>Tests of FIGlet.Net.</Description>
+
+    <Copyright>© Wencey Wang 2017</Copyright>
+
+    <PackageLicenseUrl>https://www.gnu.org/licenses/agpl.html</PackageLicenseUrl>
+
+    <PackageProjectUrl>https://github.com/WenceyWang/FIGlet.Net</PackageProjectUrl>
+
+    <RepositoryUrl>https://github.com/WenceyWang/FIGlet.Net.git</RepositoryUrl>
+
+    <RepositoryType>Git</RepositoryType>
+
+    <Version>1.1.1</Version>
+
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+
+    <FileVersion>1.1.1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="FIGlet.NetUnitTest.csproj.vspscc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FIGlet.Net\FIGlet.Net.csproj" />
+  </ItemGroup>
+
+</Project>
