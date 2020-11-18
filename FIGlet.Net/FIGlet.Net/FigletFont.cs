@@ -36,25 +36,25 @@ namespace WenceyWang . FIGlet
 
 		public string Commit { get ; }
 
-		public static FIGletFont Defult
+		public static FIGletFont Default
 		{
 			get
 			{
 				lock ( DefultFont )
 				{
-					FIGletFont defult = null ;
-					DefultFont ? . TryGetTarget ( out defult ) ;
-					if ( defult == null )
+					FIGletFont defaultFont = null ;
+					DefultFont ? . TryGetTarget ( out defaultFont ) ;
+					if ( defaultFont == null )
 					{
 						Stream stream = typeof ( FIGletFont ) . GetTypeInfo ( ) .
 																Assembly . GetManifestResourceStream ( typeof ( FIGletFont ) . Namespace
 																										+ "."
 																										+ @"Fonts.standard.flf" ) ;
-						defult = new FIGletFont ( stream ) ;
+						defaultFont = new FIGletFont ( stream ) ;
 						stream ? . Dispose ( ) ;
-						DefultFont . SetTarget ( defult ) ;
+						DefultFont . SetTarget ( defaultFont ) ;
 					}
-					return defult ;
+					return defaultFont ;
 				}
 			}
 		}
@@ -63,8 +63,8 @@ namespace WenceyWang . FIGlet
 		{
 			using ( StreamReader reader = new StreamReader ( fontStream ) )
 			{
-				string [ ] configs = reader . ReadLine ( ) . Split ( ' ' ) ;
-				if ( ! configs [ 0 ] . StartsWith ( @"flf2a" ) )
+				string [ ] configs = reader . ReadLine ( )?. Split ( ' ' ) ;
+				if ( configs == null ||( ! configs [ 0 ] . StartsWith ( @"flf2a" ) ))
 				{
 					throw new ArgumentException ( $"{nameof(fontStream)} missing signature" , nameof(fontStream) ) ;
 				}
@@ -100,9 +100,8 @@ namespace WenceyWang . FIGlet
 
 				while ( ! reader . EndOfStream )
 				{
-					int charIndex ;
 					string currentLine = reader . ReadLine ( ) ?? string . Empty ;
-					if ( int . TryParse ( currentLine , out charIndex ) )
+					if ( int . TryParse ( currentLine , out var charIndex ) )
 					{
 						currentChar = charIndex ;
 					}

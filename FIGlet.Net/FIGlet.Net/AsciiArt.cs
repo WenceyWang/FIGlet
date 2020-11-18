@@ -35,7 +35,7 @@ namespace WenceyWang . FIGlet
 			}
 
 			Text = text ;
-			Font = font ?? FIGletFont . Defult ;
+			Font = font ?? FIGletFont . Default ;
 			CharacterWidth = width;
 			Result = new string[ Font . Height ] ;
 

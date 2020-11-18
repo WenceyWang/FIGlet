@@ -28,7 +28,7 @@ namespace WenceyWang . FIGlet . UnitTest
 				foreach ( CharacterWidth characterWidth in values )
 				{
 					watch . Start ( ) ;
-					AsciiArt result = new AsciiArt ( str , FIGletFont . Defult , characterWidth ) ;
+					AsciiArt result = new AsciiArt ( str , FIGletFont . Default , characterWidth ) ;
 					watch . Stop ( ) ;
 					Console . WriteLine ( result ) ;
 				}
@@ -48,7 +48,7 @@ namespace WenceyWang . FIGlet . UnitTest
 			{
 				Console . WriteLine ( Enum . GetName ( typeof ( CharacterWidth ) , characterWidth ) ) ;
 				watch . Start ( ) ;
-				AsciiArt result = new AsciiArt ( "Type Something" , FIGletFont . Defult , characterWidth ) ;
+				AsciiArt result = new AsciiArt ( "Type Something" , FIGletFont . Default , characterWidth ) ;
 				watch . Stop ( ) ;
 				Console . WriteLine ( result ) ;
 				Console . WriteLine ( ) ;
